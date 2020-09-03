@@ -16,8 +16,7 @@ body {
     font-weight: 400;
     text-align: center;
     color: var(--dark-blue);
-    /* background-image: url(../img/pokeball-background.svg);
-    background-size: 100% auto; */
+    /* background-image: url(../img/shorter-pokeball-background.svg); */
 }
 
 h1 {
@@ -26,6 +25,13 @@ h1 {
     text-align: center;
     color: var(--red);
 }
+
+/* .background {
+    width: 100%;
+    background-image: url(../img/shorter-pokeball-background.svg);
+    background-size: cover;
+    padding-bottom: calc(100%);
+    } */
 
 .page-footer {
     clear: both;
