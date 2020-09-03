@@ -1,13 +1,13 @@
-:root{
-    --yellow: #FFCB05;
-    --light-blue: #3D7DCA;
-    --dark-blue: #003A70;
-    --light-yellow: #FFF8DB;
-    --red: #CC0000;
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    color: var(--dark-blue);
+    color: #003A70;
     /* background-image: url(../img/pokeball-background.svg);
     background-size: 100% auto; */
 }
@@ -24,11 +24,13 @@ h1 {
     font-family: 'Luckiest Guy', cursive;
     font-size: 40px;
     text-align: center;
-    color: var(--red);
+    color: #CC0000;
 }
 
 .page-footer {
     clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: left;
 }
