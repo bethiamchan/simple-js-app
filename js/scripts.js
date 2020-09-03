@@ -3,3 +3,7 @@ let pokemonList = [
     {name: "Charmander", height: 0.6, type: "fire"},
     {name: "Igglybuff", height: 0.3, type: ["fairy", "normal"]}
 ];
+
+for (let i = 0; i < pokemonList.length; i++){
+    document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') </p>');
+}
