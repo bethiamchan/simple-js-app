@@ -16,8 +16,7 @@ body {
     font-weight: 400;
     text-align: center;
     color: #003A70;
-    /* background-image: url(../img/pokeball-background.svg);
-    background-size: 100% auto; */
+    /* background-image: url(../img/shorter-pokeball-background.svg); */
 }
 
 h1 {
@@ -27,12 +26,22 @@ h1 {
     color: #CC0000;
 }
 
+/* .background {
+    width: 100%;
+    background-image: url(../img/shorter-pokeball-background.svg);
+    background-size: cover;
+    padding-bottom: calc(100%);
+    } */
+
 .page-footer {
     clear: both;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-align: left;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 @media all and (max-width: 750px) {

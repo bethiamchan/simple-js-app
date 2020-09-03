@@ -36,7 +36,10 @@ h1 {
 .page-footer {
     clear: both;
     display: flex;
-    text-align: left;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 @media all and (max-width: 750px) {
