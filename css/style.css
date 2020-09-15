@@ -26,12 +26,28 @@ h1 {
     color: var(--red);
 }
 
-/* .background {
-    width: 100%;
-    background-image: url(../img/shorter-pokeball-background.svg);
-    background-size: cover;
-    padding-bottom: calc(100%);
-    } */
+.pokemon-button {
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: var(--dark-blue);
+    color: var(--yellow);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-bottom: 2px solid #001D38;
+    transition: 0.5s opacity;
+    margin: 5px;
+}
+
+.pokemon-button:hover, .pokemon-button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.pokemon-list li {
+    list-style-type: none;
+  }
 
 .page-footer {
     clear: both;
