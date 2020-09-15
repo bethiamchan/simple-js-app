@@ -18,10 +18,15 @@ let pokemonRepository = (function () {
     ];
     
     function add(pokemon) {
-        if (typeof(pokemon) === 'object') {
+        if (
+            typeof(pokemon) === 'object' &&
+            "name" in pokemon &&
+            "height" in pokemon &&
+            "type" in pokemon
+            ) {
             pokemonList.push(pokemon);
         } else {
-            document.write("Please enter valid Pokemon details as an object.");
+            console.log('Please enter valid Pokemon details as an object with name, height, and type.');
         }
     }
     function getAll() {
