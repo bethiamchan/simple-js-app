@@ -26,6 +26,7 @@ h1 {
     color: var(--red);
 }
 
+/* pokemon button styling */
 .pokemon-button {
     border: none;
     font-family: inherit;
@@ -48,6 +49,7 @@ h1 {
 .pokemon-list li {
     list-style-type: none;
   }
+/* end of pokemon button styling */
 
 .page-footer {
     clear: both;

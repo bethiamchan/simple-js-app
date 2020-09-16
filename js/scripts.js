@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
             type: ["fairy", "normal"]
         }
     ];
-    
+    //If a new pokemon is added, it must be an object with name/height/type to be accepeted and added to the list.
     function add(pokemon) {
         if (
             typeof(pokemon) === 'object' &&
@@ -35,6 +35,7 @@ let pokemonRepository = (function () {
     function showDetails(pokemon) {
         console.log(pokemon);
     }
+    //Add buttons as list items and append to ul. Event listener to call showDetails function to log pokemon on button click.
     function addListItem(pokemon) {
         let pokemonButtonList = document.querySelector('.pokemon-list');
         let pokemonListItem = document.createElement('li');
@@ -51,7 +52,7 @@ let pokemonRepository = (function () {
         addListItem : addListItem
     };
 })();
-
+//Iterates over all pokemon and applies above addListItem function
 pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
 });
