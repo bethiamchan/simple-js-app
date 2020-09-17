@@ -39,6 +39,8 @@ h1 {
     border-bottom: 2px solid #001D38;
     transition: 0.5s opacity;
     margin: 5px;
+    display: inline-block;
+    width: 150px;
 }
 
 .pokemon-button:hover, .pokemon-button:focus {
