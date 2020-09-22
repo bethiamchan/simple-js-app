@@ -41,6 +41,7 @@ h1 {
     margin: 5px;
     display: inline-block;
     width: 150px;
+    text-transform: capitalize;
 }
 
 .pokemon-button:hover, .pokemon-button:focus {
@@ -50,6 +51,11 @@ h1 {
 
 .pokemon-list li {
     list-style-type: none;
+  }
+
+  .pokemon-list {
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
   }
 /* end of pokemon button styling */
 
@@ -66,4 +72,13 @@ h1 {
       h1 {
         font-size: 22px;
       }
+      .pokemon-list {
+          max-height: calc(100vh - 70px);
+      }
+    }
+
+@media all and (min-width: 2600px) {
+    .pokemon-list {
+        max-height: calc(100vh - 175px);
+    }
     }
