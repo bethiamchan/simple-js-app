@@ -43,6 +43,7 @@ h1 {
     width: 150px;
 }
 
+
 .pokemon-button:hover, .pokemon-button:focus {
     cursor: pointer;
     opacity: 0.8;
@@ -50,7 +51,15 @@ h1 {
 
 .pokemon-list li {
     list-style-type: none;
+
   }
+
+  ul.pokemon-list {
+      /* adding a max-height attribute allows for the list to expand up until that side of the screen minus the footer and header space (about 145px) based on what you have set up already */
+    max-height: calc(100vh - 145px); 
+    /* if you dont constrain the overflow to a scroll bar it wont look like it's limited in size try commenting this out below.. basically max-height only works if you are declaring the overflow in this case. */
+    overflow-y: scroll;
+}
 /* end of pokemon button styling */
 
 .page-footer {
