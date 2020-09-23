@@ -6,9 +6,9 @@ let pokemonRepository = (function () {
     //If a new pokemon is added, it must be an object with name/height/type to be accepeted and added to the list.
     function add(pokemon) {
         if (
-            typeof(pokemon) === 'object' &&
+            typeof (pokemon) === 'object' &&
             "name" in pokemon
-            ) {
+        ) {
             pokemonList.push(pokemon);
         } else {
             console.log('Pokemon does not have correct details.');
@@ -31,7 +31,7 @@ let pokemonRepository = (function () {
         pokemonButton.classList.add('pokemon-button');
         pokemonListItem.appendChild(pokemonButton);
         pokemonButtonList.appendChild(pokemonListItem);
-        pokemonButton.addEventListener('click', function(event) {
+        pokemonButton.addEventListener('click', function (event) {
             showDetails(pokemon);
         });
     }
@@ -89,15 +89,15 @@ let pokemonRepository = (function () {
         nameElement.innerText = item.name;
 
         let heightElement = document.createElement('p');
-        heightElement.classList.add('grid','grid-item','modal-content');
+        heightElement.classList.add('grid', 'grid-item', 'modal-content');
         heightElement.innerText = 'Height: ' + (item.height / 10) + ' m';
 
         let weightElement = document.createElement('p');
-        weightElement.classList.add('grid','grid-item','modal-content');
+        weightElement.classList.add('grid', 'grid-item', 'modal-content');
         weightElement.innerText = 'Weight: ' + (item.weight / 10) + ' kg';
 
         let typesElement = document.createElement('p');
-        typesElement.classList.add('grid','grid-item','modal-content');
+        typesElement.classList.add('grid', 'grid-item', 'modal-content');
         if (item.types.length === 1) {
             typesElement.innerText = 'Type: ' + item.types;
         } else {
@@ -105,7 +105,7 @@ let pokemonRepository = (function () {
         }
 
         let imageElement = document.createElement('img');
-        imageElement.classList.add('grid','grid-item','modal-image');
+        imageElement.classList.add('grid', 'grid-item', 'modal-image');
         imageElement.setAttribute('src', item.imageUrl);
 
         modal.appendChild(closeButtonElement);
@@ -117,24 +117,24 @@ let pokemonRepository = (function () {
         modal.appendChild(modalGrid);
         modalContainer.appendChild(modal);
         modalContainer.classList.add('is-visible');
-      }
+    }
 
-      function hideModal() {
+    function hideModal() {
         modalContainer.classList.remove('is-visible');
-      }
+    }
 
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
-          hideModal();
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
         }
-      });
+    });
 
-      modalContainer.addEventListener('click', (e) => {
+    modalContainer.addEventListener('click', (e) => {
         let target = e.target;
-        if (target ===modalContainer) {
-          hideModal();
+        if (target === modalContainer) {
+            hideModal();
         }
-      });
+    });
 
     return {
         add: add,
@@ -147,7 +147,7 @@ let pokemonRepository = (function () {
 
 //Iterates over all pokemon and applies above addListItem function
 pokemonRepository.loadList().then(function () {
-    pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
     });
 });
