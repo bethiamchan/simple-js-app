@@ -84,6 +84,7 @@ h2 {
 	bottom: 0;
 	right: 0;
 	width: 100%;
+	z-index: -1;
 }
 
 @media all and (max-width: 750px) {
@@ -91,11 +92,10 @@ h2 {
 		font-size: 22px;
 	}
 	.pokemon-button {
-		width: 90%;
+		width: 50%;
 	}
-
 	.list-group {
-		max-height: calc(100vh - 70px);
+		max-height: calc(100vh - 100px);
 	}
 }
 
