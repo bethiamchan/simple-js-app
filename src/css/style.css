@@ -1,13 +1,13 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+:root {
+	--yellow: #ffcb05;
+	--light-blue: #3d7dca;
+	--dark-blue: #003a70;
+	--light-yellow: #fff8db;
+	--red: #cc0000;
+}
 
 * {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	text-align: center;
-	color: #003a70;
+	color: var(--dark-blue);
 	/* background-image: url(../img/shorter-pokeball-background.svg); */
 }
 
@@ -23,7 +23,7 @@ h1 {
 	font-family: 'Luckiest Guy', cursive;
 	font-size: 40px;
 	text-align: center;
-	color: #cc0000;
+	color: var(--red);
 }
 
 h2 {
@@ -31,19 +31,19 @@ h2 {
 	font-size: 24px;
 	font-weight: 600;
 	text-align: center;
-	color: #cc0000;
+	color: var(--red);
 }
 
 /* navbar styling */
 .navbar {
-	background-color: #cc0000;
+	background-color: var(--red);
 }
 
 .navbar-brand {
 	font-family: 'Luckiest Guy', cursive;
 	font-size: 40px;
 	text-align: center;
-	color: #ffcb05;
+	color: var(--yellow);
 }
 
 /* pokemon button styling */
@@ -52,30 +52,23 @@ h2 {
 	font-family: inherit;
 	font-size: 18px;
 	font-weight: 600;
-	background-color: #003a70;
-	color: #ffcb05;
+	background-color: var(--dark-blue);
+	color: var(--yellow);
 	text-decoration: none;
 	padding: 10px 20px;
 	border-radius: 5px;
 	border-bottom: 2px solid #001d38;
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
 	transition: 0.5s;
 	margin: 3px auto 0px auto;
 	text-transform: capitalize;
 	width: 30%;
 }
 
-.pokemon-button:hover {
-	cursor: pointer;
-	background-color: #ffcb05;
-	color: #003a70;
-}
-
+.pokemon-button:hover,
 .pokemon-button:focus {
 	cursor: pointer;
-	background-color: #ffcb05;
-	color: #003a70;
+	background-color: var(--yellow);
+	color: var(--dark-blue);
 }
 
 .list-group {
@@ -86,13 +79,12 @@ h2 {
 
 .page-footer {
 	clear: both;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	position: fixed;
 	bottom: 0;
 	right: 0;
 	width: 100%;
+	z-index: -1;
 }
 
 @media all and (max-width: 750px) {
@@ -100,11 +92,10 @@ h2 {
 		font-size: 22px;
 	}
 	.pokemon-button {
-		width: 90%;
+		width: 50%;
 	}
-
 	.list-group {
-		max-height: calc(100vh - 70px);
+		max-height: calc(100vh - 100px);
 	}
 }
 
