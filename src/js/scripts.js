@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
 	let pokemonList = [];
-	let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+    let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 	//If a new pokemon is added, it must be an object with name/height/type to be accepeted and added to the list.
 	function add(pokemon) {
@@ -70,8 +70,8 @@ let pokemonRepository = (function () {
 			.catch(function (e) {
 				console.error(e);
 			});
-	}
-
+    }
+    
 	function showModal(item) {
 		let modalBody = $('.modal-body');
 		let modalTitle = $('.modal-title');
@@ -121,7 +121,11 @@ let pokemonRepository = (function () {
 
 //Iterates over all pokemon and applies above addListItem function
 pokemonRepository.loadList().then(function () {
-	pokemonRepository.getAll().forEach(function (pokemon) {
+    let pokelist = pokemonRepository.getAll();
+
+    pokelist.sort((a,b) => (a.name > b.name) ? 1 : -1);
+
+    pokelist.forEach(function (pokemon) {
 		pokemonRepository.addListItem(pokemon);
 	});
 });
