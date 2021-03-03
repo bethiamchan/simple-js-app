@@ -11,6 +11,7 @@ let pokemonRepository = (function () {
 		}
 	}
 	function getAll() {
+		pokemonList = pokemonList.sort((a, b) => (a.name < b.name ? -1 : 1));
 		return pokemonList;
 	}
 	function showDetails(pokemon) {
@@ -121,7 +122,11 @@ let pokemonRepository = (function () {
 
 //Iterates over all pokemon and applies above addListItem function
 pokemonRepository.loadList().then(function () {
-	pokemonRepository.getAll().forEach(function (pokemon) {
+	let newList = pokemonRepository.getAll();
+	newList.forEach(function (pokemon) {
 		pokemonRepository.addListItem(pokemon);
 	});
+	console.log(newList);
 });
+
+
